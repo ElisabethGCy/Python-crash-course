@@ -116,3 +116,98 @@ print (Guest_list)
 del Guest_list[0]
 del Guest_list[0]
 print (Guest_list)
+
+# ================================================================================================================================================
+# 3-8. SEEING THE WORLD: Think of at least five places in the world you’d like to
+# visit .
+# •	 Store the locations in a list . Make sure the list is not in alphabetical order .
+
+countries = ["Canada", "Australia", "France","Japan"]
+# •	 Print your list in its original order . Don’t worry about printing the list neatly,
+# just print it as a raw Python list .
+print (countries)
+
+# •	 Use sorted() to print your list in alphabetical order without modifying the
+# actual list .
+
+print (sorted(countries))
+# •	 Show that your list is still in its original order by printing it .
+
+print (countries)
+# •	 Use sorted() to print your list in reverse alphabetical order without changing
+# the order of the original list .
+print (sorted(countries, reverse=True))
+# •	Show that your list is still in its original order by printing it again .
+print (countries)
+# •	 Use reverse() to change the order of your list . Print the list to show that its
+# order has changed .
+print (countries)
+# •	 Use reverse() to change the order of your list again . Print the list to show
+# it’s back to its original order .
+countries.reverse()
+print(f"This is the reverse: {countries}")
+countries.reverse()
+print("Restored to original order:", countries)
+
+# •	 Use sort() to change your list so it’s stored in alphabetical order . Print the
+# list to show that its order has been changed .
+countries.sort()
+print(countries)
+# •	 Use sort() to change your list so it’s stored in reverse alphabetical order .
+countries.sort(reverse=True)
+# Print the list to show that its order has changed .
+print(f"This is the reverse alphabetical order: {countries}")
+
+# ================================================================================================================================================
+# 3-9. Dinner Guests: Working with one of the programs from Exercises 3-4
+# through 3-7 (page 46), use len() to print a message indicating the number
+# of people you are inviting to dinner .
+from second_part import Guest_list
+total_invitation = len(Guest_list)
+print(f"I've invited : {total_invitation} guests")
+
+#================================================================================================================================================
+# 3-10. Every Function: Think of something you could store in a list . For example,
+# you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like . 
+# Write a program that creates a list containing these items
+# and then uses each function introduced in this chapter at least once .
+
+ice_cream_flavors=["Vanila", "Chocolate", "Turron", "Pistacho", "Oreo"]
+
+# Imprimir la lista original
+print("Original list:", ice_cream_flavors)
+
+# 1. append() - Añadir un sabor al final de la lista
+ice_cream_flavors.append("Cookie dough")
+print("After append('Cookie dough'):", ice_cream_flavors)
+
+# 2. insert() - Insertar un sabor en una posición específica
+ice_cream_flavors.insert(2, "Strawberry")
+print("After insert(2, 'Strawberry'):", ice_cream_flavors)
+
+# 3. del - Eliminar un sabor por índice
+del ice_cream_flavors[1]
+print("After del ice_cream_flavors[1]:", ice_cream_flavors)
+
+# 4. pop() - Eliminar y obtener el último sabor de la lista
+popped_flavor = ice_cream_flavors.pop()
+print("After pop():", ice_cream_flavors)
+print("Popped flavor:", popped_flavor)
+
+# 5. remove() - Eliminar un sabor por valor
+ice_cream_flavors.remove("Strawberry")
+print("After remove('Strawberry'):", ice_cream_flavors)
+
+# 6. sort() - Ordenar la lista en orden alfabético
+ice_cream_flavors.sort()
+print("After sort():", ice_cream_flavors)
+
+# 7. sorted() - Imprimir la lista ordenada en orden inverso sin cambiar el orden original
+print("Sorted list in reverse order:", sorted(ice_cream_flavors, reverse=True))
+
+# 8. reverse() - Invertir el orden de la lista
+ice_cream_flavors.reverse()
+print("After reverse():", ice_cream_flavors)
+
+# 9. len() - Obtener la longitud de la lista
+print("Length of the list:", len(ice_cream_flavors))
